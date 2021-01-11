@@ -7,7 +7,7 @@ To read more about what premiere mode does, see below.
 #### How to install
 1. Install Docker (instructions here <https://docs.docker.com/engine/install/>)
 2. Run `docker build . -t premiere-deluge` in the same directory as this repo's Dockerfile
-3. Run `docker run --network host -it premiere-deluge`
+3. Run `docker run -p 8112:8112 -v config:/config -it premiere-deluge`
 4. You should be able to connect to the web UI running locally on port 8112
 5. Default password is "deluge"
 6. Right click torrents and select "Premiere Mode" to put them in premiere mode
