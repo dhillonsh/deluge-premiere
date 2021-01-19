@@ -52,4 +52,6 @@ VOLUME /config
 
 ENTRYPOINT deluged -c /config && \
   deluge-web -c /config --fork && \
+  sleep 10 && \
+  deluge-console -c /config "plugin --enable Premiere" && \
   /bin/bash
